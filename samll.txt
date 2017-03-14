@@ -1,0 +1,2 @@
+European NNP E I-LOC
+Thursean NNP T I-LOC
