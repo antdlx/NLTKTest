@@ -11,8 +11,8 @@ class ClassAffix2:
             affixs[line[:-1]]=1
 
 
-        file2 = open("outputAffix","w")
-        file3 = open("outputBig.txt")
+        file2 = open("outputAffix.txt","w")
+        file3 = open("outputBighead.txt")
         #先清空以前的
         file2.truncate()
         file3.seek(0)
