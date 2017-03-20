@@ -1,5 +1,5 @@
 #-*- coding:utf-8 -*-
-#统计地理词后缀
+#从训练集统计地理词后缀
 
 file1 = open("engLocBighead.train")
 

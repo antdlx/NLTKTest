@@ -3,7 +3,7 @@ import re
 
 class ClassOutputFormat:
     def doFormat(self):
-        file1 = open("output_result.txt")
+        file1 = open("datas\\output_result.txt")
         #二次检查地理词，消耗性能提高准确率
         sec_words = dict()
         LOC = "I-LOC"
@@ -11,7 +11,7 @@ class ClassOutputFormat:
         lines = file1.readlines()
         line_num = len(lines)
         #自定义2，构建23词表
-        file2 = open("23words.txt")
+        file2 = open("datas\\23words.txt")
         ttwords = dict()
         for fline in file2:
             ttwords[fline[:-1]] = 1
@@ -48,7 +48,15 @@ class ClassOutputFormat:
         sen = list()
         word_num = -1
 
-        #自定义规则3：二次检索,只且只需要对一元地理词进行处理即可
+        #自定义规则3：二次检索,只且只需要对一元地理词进行处理即可，可以通过在sec_words词表中添加自定义单词进一步提高准确率
+        #添加自定义单词：
+        custom = ["London","Mediterranean","Oakland","California","Philippines","Washington","Philippine","Oregon","Nevada",
+                  "Washington","Delaware","Manila","Arizona","Colorado","Maine","Massachusetts","Cambridge","Britain","Oxford",
+                  "Austria","Alaska"]
+        for c in custom:
+            if sec_words.has_key(c)==False:
+                sec_words[c]=1
+        #二次检验
         for line in lines:
             line = line.split()
             word = []

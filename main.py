@@ -9,7 +9,7 @@ class ClassMain:
         ioFunctions = IOFunctions.IOFunctions()
         pretreatment = Pretreatment.Pretreatment()
 
-        raw = ioFunctions.ReadFile('D:\\codes\\Python\\PythonSpace\\NLTKTest\\articles.txt')
+        raw = ioFunctions.ReadFile('D:\\codes\\Python\\PythonSpace\\NLTKTest\\datas\\articles.txt')
         #清除Unicode标签u"和u'
         raw = re.sub("u\"","",raw)
         raw = re.sub("u\'","",raw)
@@ -23,7 +23,7 @@ class ClassMain:
         # iob = pretreatment.IOBTree(chunked_words)
 
         #将处理完的语料保存到output文件中去
-        file = open("output.txt","w")
+        file = open("datas\\output.txt","w")
         file.truncate()
         for line in tagged_words:
             string=""

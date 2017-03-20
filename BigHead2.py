@@ -3,8 +3,8 @@
 
 class ClassBigHead2:
     def doBigHead2(self):
-        file = open("output.txt")
-        file2 = open("outputBighead.txt","w")
+        file = open("datas\\output.txt")
+        file2 = open("datas\\outputBighead.txt","w")
         file2.truncate()
         line_num = 0
         isHead = False

@@ -1,9 +1,9 @@
 #-*- coding:utf-8 -*-
-#统计地理词后缀
+#提取数据集的后缀
 
 class ClassAffix2:
     def doAffix2(self):
-        file1 = open("affixs.txt")
+        file1 = open("datas\\affixs.txt")
 
         affixs = dict()
 
@@ -11,8 +11,8 @@ class ClassAffix2:
             affixs[line[:-1]]=1
 
 
-        file2 = open("outputAffix.txt","w")
-        file3 = open("outputBighead.txt")
+        file2 = open("datas\\outputAffix.txt","w")
+        file3 = open("datas\\outputBighead.txt")
         #先清空以前的
         file2.truncate()
         file3.seek(0)

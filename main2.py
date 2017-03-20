@@ -19,8 +19,8 @@ class ClassMain2:
         # subprocess.Popen("del output_result.txt",shell=True)
         # subprocess.Popen("crf_test.exe -m model118x outputAffix.txt >> output_result.txt",shell=True)
         #注意：Popen是并行的，不会阻塞父进程，call是阻塞式的，父进程会等待子进程完成任务才继续
-        subprocess.call("del output_result.txt",shell=True)
-        subprocess.call("crf_test.exe -m model118x outputAffix.txt >> output_result.txt",shell=True)
+        subprocess.call("del datas\\output_result.txt",shell=True)
+        subprocess.call("crfpp\\crf_test.exe -m crfpp\\model118x datas\\outputAffix.txt >> datas\\output_result.txt",shell=True)
 
         #format
         oformat = OutputFormat.ClassOutputFormat()
